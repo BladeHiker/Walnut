@@ -1,49 +1,196 @@
-<h1 align="center">Welcome to BiliDanmu_go 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-V1.0-blue.svg?cacheSeconds=2592000" />
-  <a href="#" target="_blank">
-    <img alt="License: BSD" src="https://img.shields.io/badge/License-BSD-yellow.svg" />
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
+
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
+  <h3 align="center">Walnut</h3>
+
+  <p align="center">
+    An awesome、efficient and concise app for your live broadcast!
+    <br />
+    <a href="http://walnutdocs.shiluo.design/"><strong>探索文档 »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">观看演示</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">报告问题</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">寻求特性</a>
+  </p>
+
 </p>
 
-> 直播助手，go语言实现，支持短时大量弹幕，礼物和进场处理显示。
 
-**目前只实现了 B站 直播的功能。**
 
-## Install
+<!-- TABLE OF CONTENTS -->
 
+## 目录
+
+* [关于项目](#关于项目)
+  * [构建时依赖](#built-with)
+* [起步](#getting-started)
+  * [先决条件](#prerequisites)
+  * [安装](#installation)
+* [使用](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+
+
+<!-- ABOUT THE PROJECT -->
+## 关于项目
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+Bilibili 现在推出了官方的直播助手工具，但是性能堪忧，使用的人也是寥寥无几。民间也有不少 Bilibili 直播助手工具，但是大部分都是设置繁琐，界面复杂，对新手极不友好。所以我们开发了这个项目，提供精简，高效的直播助手服务。
+
+为什么要使用此工具:
+* **任何人**第一次使用这个工具不需要**任何**繁琐的界面设置，**开箱即用**。
+* 界面友好，功能精简，小巧，适用于绝大多数用户的直播需求。
+* 性能优越，占用极少数的电脑性能，不影响你的直播体验。 :smiley:
+
+当然了，因为每个人需求不一致，没有任何一个项目能够满足所有人的需求，因此我们会逐步添加更多的功能、特性到这个项目中来。如果你有任何方面的改进，都可以 fork 这个项目，修改并提交 PR。或者添加我们的联系方式，把你的想法告诉我们，非常欢迎 :)
+
+一些常被使用到的资源会列在”致谢“一栏。
+
+### 构建时依赖
+This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+* [Laravel](https://laravel.com)
+
+
+
+<!-- GETTING STARTED -->
+## 起步
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
 ```sh
-待更新
+npm install npm@latest -g
 ```
 
+### Installation
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+```sh
+git clone https://github.com/your_username_/Project-Name.git
+```
+3. Install NPM packages
+```sh
+npm install
+```
+4. Enter your API in `config.js`
+```JS
+const API_KEY = 'ENTER YOUR API';
+```
+
+
+
+<!-- USAGE EXAMPLES -->
 ## Usage
 
-```sh
-待更新
-```
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-## Feature
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-> - 🔥  Compatible for short RoomID,such as 102(shortID) or 21129128(common).
-> - 😁 Support that display barrage,gift and entry message.
-> - 💎 No missing any message(by `channel` and `go` feature)!
 
-## Future
 
-> 😀 Because of developing by [golang](https://golang.org/) ,and go do not pay attention to [GUI](https://zh.wikipedia.org/zh/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2) .So there is no foreground programs right now.if having,i will update more other feature.for example,playing songs by user barrage :)
+<!-- ROADMAP -->
+## Roadmap
 
->  💡 WELCOME COMTRIBUTING!
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 
-## Author
 
-👤 **shiluo**
 
-* Website: http://shiluo.design/
-* Github: [@shiluo](https://github.com/shiluo)
+<!-- CONTRIBUTING -->
+## Contributing
 
-## Show your support
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Give a ⭐️ if this project helped you!
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Img Shields](https://shields.io)
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Pages](https://pages.github.com)
+* [Animate.css](https://daneden.github.io/animate.css)
+* [Loaders.css](https://connoratherton.com/loaders)
+* [Slick Carousel](https://kenwheeler.github.io/slick)
+* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+* [Sticky Kit](http://leafo.net/sticky-kit)
+* [JVectorMap](http://jvectormap.com)
+* [Font Awesome](https://fontawesome.com)
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png
