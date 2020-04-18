@@ -22,7 +22,7 @@ var
 	json        = jsoniter.ConfigCompatibleWithStandardLibrary
 	keyUrl      = "https://api.live.bilibili.com/room/v1/Danmu/getConf" // params: room_id=xxx&platform=pc&player=web
 	userInfoUrl = "https://api.bilibili.com/x/space/acc/info"           //mid=382297465&jsonp=jsonp
-	server      = "shiluo.design"
+	server      = "39.106.55.151:3000"
 	RoomInfoURI = "https://api.live.bilibili.com/xlive/web-room/v1/index/getInfoByRoom" // params:?room_id=923833
 )
 
@@ -208,7 +208,7 @@ func GetMusicURI(keywords string) (URI, singer, name string, err error) {
 	u := url.URL{
 		Scheme:   "http",
 		Host:     server,
-		Path:     "/music/search",
+		Path:     "/search",
 		RawQuery: q.Encode(),
 	}
 	resp, err := http.Get(u.String())
@@ -227,7 +227,7 @@ func GetMusicURI(keywords string) (URI, singer, name string, err error) {
 	singer = gjson.GetBytes(rawdata, "result.songs.0.artists.0.name").String()
 
 	// 根据id获取歌曲uri
-	r := fmt.Sprintf("http://%s/music/song/url?id=%d", server, id)
+	r := fmt.Sprintf("http://%s/song/url?id=%d", server, id)
 	res, err := http.Get(r)
 	if err != nil {
 		return
