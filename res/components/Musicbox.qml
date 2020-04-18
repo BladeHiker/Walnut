@@ -16,6 +16,7 @@ Item {
     property bool musicSeek: false
     property bool musicenable: false
     property bool settingmode: settingPop.opened
+    property bool repeat: false
     onVisibleChanged: {
         if (visible)
             settingPop.open()
@@ -53,7 +54,8 @@ Item {
             }
 
             if (status == Audio.EndOfMedia) {
-                playlist.removeItem(0)
+                if (!repeat)
+                    playlist.removeItem(0)
             }
         }
         onMediaObjectChanged: {
@@ -143,7 +145,8 @@ Item {
             //            placeholderText: "输入点歌关键字"
             onTextChanged: {
                 if (text.length != 0 && text.length < 6) {
-                    keyEnter.text = '使用"' + keyInp.text + ' 歌曲关键词"来点歌'
+                    //                    keyEnter.text = '使用"' + keyInp.text + ' 歌曲关键词"来点歌'
+                    keyEnter.text = "开启点歌"
                     keyEnter.enabled = true
                 } else if (text.length == 0) {
                     keyEnter.text = "关键字不能为空"
@@ -156,13 +159,28 @@ Item {
         }
         Button {
             id: keyEnter
-            width: parent.width
+            width: parent.width / 2
             height: 15
+            anchors.left: keyInp.left
             font.family: "微软雅黑"
             anchors.top: keyInp.bottom
+            anchors.topMargin: 2
             onClicked: {
                 key = keyInp.text
                 musicSeek = true
+                settingPop.close()
+            }
+        }
+        Button {
+            id: backBtn
+            width: parent.width / 2
+            height: 15
+            anchors.left: keyEnter.right
+            font.family: "微软雅黑"
+            anchors.top: keyInp.bottom
+            anchors.topMargin: 2
+            text: "取消"
+            onClicked: {
                 settingPop.close()
             }
         }
@@ -459,7 +477,21 @@ Item {
                 player.play()
             }
         }
-
+        Button {
+            id: repeatBtn
+            width: 18
+            height: 15
+            background: Rectangle {
+                color: "#00000000"
+            }
+            highlighted: repeat
+            text: repeat ? FA.Icons.faUndo : FA.Icons.faStepForward
+            font.pixelSize: pressed ? 9 : 10
+            font.family: FA.Fonts.solid
+            onClicked: {
+                repeat = !repeat
+            }
+        }
         Button {
             id: settingBtn
             width: 18
