@@ -38,7 +38,7 @@ ApplicationWindow {
         id: trayIcon
         visible: true
         icon.mask: true
-        iconSource: "qrc:/res/icon.png"
+        iconSource: "qrc:/res/Walnuts.ico"
         icon.name: "LiveAssistant"
         //        Component.onCompleted: showMessage("LiveAssistant", "LiveAssistant已启动")
         menu: Menu {
