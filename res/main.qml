@@ -184,6 +184,7 @@ ApplicationWindow {
                 horizontalAlignment: Text.AlignHCenter
                 rotation: 0
                 color: T.ColorDesign.topBtnText
+                font.weight: Font.Bold
             }
             color: T.ColorDesign.topBtnBG
             MouseArea {
@@ -624,6 +625,7 @@ ApplicationWindow {
                         spacing: 10
                         Text {
                             color: T.ColorDesign.infoRoomIdText
+                            font.weight: Font.Bold
                             text: '<font color="' + T.ColorDesign.infoRoomIdIcon
                                   + '">' + ((linked == 0) ? FA.Icons.faUnlink : FA.Icons.faLink)
                                   + '</font>' + ' ' + roomID
@@ -634,6 +636,7 @@ ApplicationWindow {
                         }
                         Text {
                             color: T.ColorDesign.infoOnlineText
+                            font.weight: Font.Bold
                             text: '<font color="' + T.ColorDesign.infoOnlineIcon
                                   + '">' + FA.Icons.faUsers + '</font>' + ' ' + online
                             anchors.verticalCenter: parent.verticalCenter
@@ -643,6 +646,7 @@ ApplicationWindow {
                         }
                         Text {
                             color: T.ColorDesign.infoFansText
+                            font.weight: Font.Bold
                             text: '<font color="' + T.ColorDesign.infoFansIcon
                                   + '">' + FA.Icons.faHeart + '</font>' + ' ' + fans
                             anchors.verticalCenter: parent.verticalCenter

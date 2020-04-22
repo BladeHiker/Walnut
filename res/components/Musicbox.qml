@@ -350,6 +350,7 @@ Item {
         id: playSym
         anchors.right: parent.right
         font.family: FA.Fonts.solid
+        font.weight: Font.Bold
         font.pixelSize: 13
         text: {
             switch (player.error) {
@@ -442,6 +443,7 @@ Item {
             id: playBtn
             width: 18
             height: 15
+            font.weight: Font.Bold
             background: Rectangle {
                 color: "#00000000"
             }
@@ -465,6 +467,7 @@ Item {
             id: nextBtn
             width: 18
             height: 15
+            font.weight: Font.Bold
             background: Rectangle {
                 color: "#00000000"
             }
@@ -481,6 +484,7 @@ Item {
             id: repeatBtn
             width: 18
             height: 15
+            font.weight: Font.Bold
             background: Rectangle {
                 color: "#00000000"
             }
@@ -496,6 +500,7 @@ Item {
             id: settingBtn
             width: 18
             height: 15
+            font.weight: Font.Bold
             background: Rectangle {
                 color: "#00000000"
             }
@@ -510,6 +515,7 @@ Item {
             id: listBtn
             width: 18
             height: 15
+            font.weight: Font.Bold
             background: Rectangle {
                 color: "#00000000"
             }
@@ -525,6 +531,7 @@ Item {
             id: muteBtn
             width: 18
             height: 15
+            font.weight: Font.Bold
             background: Rectangle {
                 color: "#00000000"
             }
