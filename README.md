@@ -19,13 +19,13 @@
 <br />
 
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Walnuts-Assistant/Walnut">
+    <img src="http://cdn.shiluo.design/icon.ico" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">Walnut</h3>
 
   <p align="center">
-    An awesome、efficient and concise app for your live broadcast!
+    一款精简、高效、美观的直播助手应用
     <br />
     <a href="http://walnutdocs.shiluo.design/"><strong>探索文档 »</strong></a>
     <br />
@@ -36,6 +36,7 @@
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">寻求特性</a>
   </p>
+
 
 </p>
 
