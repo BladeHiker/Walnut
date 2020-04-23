@@ -10,7 +10,7 @@ import (
 func main() {
 	//Create Application
 	app := qamel.NewApplication(len(os.Args), os.Args)
-	app.SetApplicationDisplayName("Live Assistant")
+	app.SetApplicationDisplayName("Walnuts")
 	app.SetWindowIcon(":/res/Walnuts.ico")
 
 	engine := qamel.NewEngine()
