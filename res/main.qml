@@ -290,8 +290,7 @@ ApplicationWindow {
                     if (event.key === Qt.Key_Enter
                             || event.key === Qt.Key_Return) {
                         roomidArea.state = "conn"
-                        roomID = Number(roomidInp.text)
-                        connectFeedBack.receiveRoomID(roomID)
+                        sendTimer.start()
                     }
                     event.accepted = true
                 }
@@ -360,6 +359,16 @@ ApplicationWindow {
                         }
                     }
                 ]
+                Timer {
+                    id: sendTimer
+                    repeat: false
+                    interval: 1000
+                    onTriggered: {
+                        roomID = Number(roomidInp.text)
+                        connectFeedBack.receiveRoomID(roomID)
+                    }
+                }
+
                 TextField {
                     id: roomidInp
                     Component.onCompleted: {
@@ -424,10 +433,6 @@ ApplicationWindow {
                     focus: true
                     height: 35
                     width: 200
-                    onPressed: {
-                        //多线程解决就不需要这个了
-                        roomidArea.state = "conn"
-                    }
                     Behavior on width {
                         NumberAnimation {
                             alwaysRunToEnd: true
@@ -485,9 +490,8 @@ ApplicationWindow {
                     }
 
                     onClicked: {
-                        //roomidArea.state = "conn"
-                        roomID = Number(roomidInp.text)
-                        connectFeedBack.receiveRoomID(roomID)
+                        roomidArea.state = "conn"
+                        sendTimer.start()
                     }
                 }
             }
