@@ -184,6 +184,7 @@ ApplicationWindow {
                 horizontalAlignment: Text.AlignHCenter
                 rotation: 0
                 color: T.ColorDesign.topBtnText
+                font.weight: Font.Bold
             }
             color: T.ColorDesign.topBtnBG
             MouseArea {
@@ -289,8 +290,7 @@ ApplicationWindow {
                     if (event.key === Qt.Key_Enter
                             || event.key === Qt.Key_Return) {
                         roomidArea.state = "conn"
-                        roomID = Number(roomidInp.text)
-                        connectFeedBack.receiveRoomID(roomID)
+                        sendTimer.start()
                     }
                     event.accepted = true
                 }
@@ -359,6 +359,16 @@ ApplicationWindow {
                         }
                     }
                 ]
+                Timer {
+                    id: sendTimer
+                    repeat: false
+                    interval: 1000
+                    onTriggered: {
+                        roomID = Number(roomidInp.text)
+                        connectFeedBack.receiveRoomID(roomID)
+                    }
+                }
+
                 TextField {
                     id: roomidInp
                     Component.onCompleted: {
@@ -423,10 +433,6 @@ ApplicationWindow {
                     focus: true
                     height: 35
                     width: 200
-                    onPressed: {
-                        //多线程解决就不需要这个了
-                        roomidArea.state = "conn"
-                    }
                     Behavior on width {
                         NumberAnimation {
                             alwaysRunToEnd: true
@@ -484,9 +490,8 @@ ApplicationWindow {
                     }
 
                     onClicked: {
-                        //roomidArea.state = "conn"
-                        roomID = Number(roomidInp.text)
-                        connectFeedBack.receiveRoomID(roomID)
+                        roomidArea.state = "conn"
+                        sendTimer.start()
                     }
                 }
             }
@@ -624,6 +629,7 @@ ApplicationWindow {
                         spacing: 10
                         Text {
                             color: T.ColorDesign.infoRoomIdText
+                            font.weight: Font.Bold
                             text: '<font color="' + T.ColorDesign.infoRoomIdIcon
                                   + '">' + ((linked == 0) ? FA.Icons.faUnlink : FA.Icons.faLink)
                                   + '</font>' + ' ' + roomID
@@ -634,6 +640,7 @@ ApplicationWindow {
                         }
                         Text {
                             color: T.ColorDesign.infoOnlineText
+                            font.weight: Font.Bold
                             text: '<font color="' + T.ColorDesign.infoOnlineIcon
                                   + '">' + FA.Icons.faUsers + '</font>' + ' ' + online
                             anchors.verticalCenter: parent.verticalCenter
@@ -643,6 +650,7 @@ ApplicationWindow {
                         }
                         Text {
                             color: T.ColorDesign.infoFansText
+                            font.weight: Font.Bold
                             text: '<font color="' + T.ColorDesign.infoFansIcon
                                   + '">' + FA.Icons.faHeart + '</font>' + ' ' + fans
                             anchors.verticalCenter: parent.verticalCenter
